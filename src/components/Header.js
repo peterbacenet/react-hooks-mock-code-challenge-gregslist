@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import Search from "./Search";
 
-function Header() {
+function Header({items, setItems, handleSubmit, input, setInput}) {
   return (
     <header>
       <h1>
@@ -10,7 +10,12 @@ function Header() {
         </span>
         gregslist
       </h1>
-      <Search />
+      <Search 
+      input={input} 
+      setInput={setInput} 
+      items={items} 
+      handleSubmit={handleSubmit} 
+      setItems={setItems} />
     </header>
   );
 }
